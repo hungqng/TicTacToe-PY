@@ -1,8 +1,11 @@
+# Import requirements
 import pygame, sys
 import numpy as np
 
+# Initialize game
 pygame.init()
 
+# Setting up constants
 WIDTH = 580
 HEIGHT = 580
 LINE_WIDTH = 10
@@ -14,26 +17,30 @@ CIRCLE_RADIUS = 60
 CIRCLE_WIDTH = 15
 CROSS_WIDTH = 25
 SPACE = 55
+# Set up color using RGB value
 BACKGROUND_COLOR = (0,220,220)
 LINE_COLOR = (90, 90, 90)
+# Player 1 and Play 2 color
 CIRCLE_COLOR = (250, 250, 250)
 CROSS_COLOR = (0, 0, 0)
 
+# Display board
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('TIC TAC TOE')
 screen.fill(BACKGROUND_COLOR)
 
 #pygame.draw.line(screen, (255,0,0), (10, 10), (300, 300), 10)
 
-# board
+# Console board
 board = np.zeros( (BOARD_ROWS, BOARD_COLS) )
 
-
+# Function outline the board
 def draw_lines():
     pygame.draw.line(screen, LINE_COLOR, (0, 200), (600, 200), LINE_WIDTH)
     pygame.draw.line(screen, LINE_COLOR, (0, 400), (600, 400), LINE_WIDTH)
     pygame.draw.line(screen, LINE_COLOR, (200, 0), (200, 600), LINE_WIDTH)
     pygame.draw.line(screen, LINE_COLOR, (400, 0), (400, 600), LINE_WIDTH)
+
 
 def draw_figures():
 	for row in range(BOARD_ROWS):
