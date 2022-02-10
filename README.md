@@ -1,7 +1,9 @@
 # TicTacToe-PY
-Built With:
-Python
-Visual Studio Code
+- This is a Tictactoe game.
 
-Prerequisites:
-pygame, numpy
+## Built With:
+1. Python
+2. Visual Studio Code
+
+##Prerequisites:
+- pygame, numpy
